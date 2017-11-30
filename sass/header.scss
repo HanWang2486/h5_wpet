@@ -1,0 +1,270 @@
+$orange: #fd6600;
+$blue: #2d2df5;
+*{
+	margin: 0;
+	padding: 0;
+}
+ul,dl,ol{
+	list-style: none;
+}
+a:hover{
+	text-decoration:none;
+}
+
+/*headerTop*/
+
+.headerTop{
+	height: 30px;
+	background: #f5f5f5;
+	border-bottom: 1px solid #ddd;
+	>div{
+		width: 1190px;
+		margin:0 auto;
+		height: 30px;
+		overflow: hidden;
+		line-height: 30px;
+		font-size: 12px;
+		.topLeft{
+			float: left;
+			overflow: hidden;
+			li{
+				float: left;
+				margin-right: 20px;
+			}
+			li:nth-of-type(1){
+				background: url("../../img/include/img1.png") no-repeat left 6px;
+				padding-left: 18px;
+				&:hover{
+					color:$blue;
+				}
+			}
+			li:nth-of-type(2){
+				color: black;
+				a{
+					color:#666677;
+					i{
+						font-style: normal;
+					}
+					span{
+						margin-left: 5px;
+						margin-top: 2px;
+						width: 15px;
+						height: 15px;
+						display: inline-block;
+						background: url("../../img/include/img5.png") no-repeat center;	
+					}
+					&:hover{
+						span{
+							transform:rotate(180deg);
+						}
+					}
+				}
+				.dis{
+					display: none;
+					position: absolute;
+					width: 400px;
+					height: 200px;
+					background:white;
+					z-index: 999;
+					border: solid 1px grey;
+					.disChoose{
+						height: 40px;
+						p{
+							float: left;
+							padding: 0 10px;
+							text-align: center;
+							font-size: 14px;
+							color: #666;
+						}
+					}
+					.disList{
+						overflow: hidden;
+						span{
+							cursor: pointer;
+							float: left;
+							display: block;
+							width: 40px;
+							text-align: center;
+							height: 20px;
+							line-height: 20px;
+							
+							margin: 3px 5px;
+							&:hover{
+								background:orange;
+								color:white;
+							}
+						}
+					}
+				}
+				
+			}
+			li:nth-of-type(3){
+				background: url("../../img/include/img2.png") no-repeat left 6px;
+				padding-left: 18px;
+				&:hover{
+					color:$orange;
+				}
+			}
+			li:nth-of-type(4){
+				span{
+					color: $orange;
+				}
+				&:hover{
+					color: $blue;
+				}
+			}
+		}
+		.topRight{
+			float: right;
+			overflow: hidden;
+			li{
+				cursor:pointer;
+				float: left;
+				&:hover{
+					color:$blue;
+				}
+
+			}
+			li:nth-of-type(1){
+				width: 75px;
+				a{
+					color: #333;
+					&:hover{
+						color:$blue;
+					}
+				}
+				a:nth-of-type(1){
+					margin-right: 10px;
+				}
+			}
+			li:nth-of-type(2){
+				margin-left: 10px;
+				background: url("../../img/include/img3.png") no-repeat left 6px;
+				padding-left: 15px;
+				span{
+					color: #fb1e00;
+				}
+			}
+			li:nth-of-type(3),li:nth-of-type(4){
+				margin-left: 15px;
+				padding-left: 18px;
+				span{
+					transition: transform .3s;
+				}
+				&:hover{
+					span{
+						transform:rotate(180deg);
+					}
+				}
+			}
+			li:nth-of-type(3){
+				background: url("../../img/include/img4.png") no-repeat left 6px;
+			}
+			li:nth-of-type(4){
+				background: url("../../img/include/img6.png") no-repeat left 6px;
+			}
+			li:nth-of-type(5){
+				background: url("../../img/include/img7.png") no-repeat left 6px;
+				padding-left: 18px;
+				margin-left: 15px;
+			}
+			li:nth-of-type(6){
+				margin-left: 15px;
+				&:hover{
+					color:#fb1e00;
+				}
+			}
+		}
+	}
+}
+
+/*headerMain*/
+.headerMain{
+	height: 120px;
+	>div{
+		float: right;
+		margin: 0 auto;
+		width: 1190px;
+		height: 120px;
+		overflow: hidden;
+		h1{
+			float: left;
+			width: 134px;
+			height: 83px;
+			background: url("../../img/include/logo.png") no-repeat center;
+			a{
+				display: none;
+			}
+		}
+		/*搜索框*/
+		.search{
+			margin-top:30px;
+			margin-left: 120px;
+			width: 480px;
+			float: left;
+			input{
+				border: solid 2px #459d36;
+				border-right: none;
+				border-radius: 0;
+				width: 405px;
+			}
+			.input-group-addon{
+				width: 75px;
+				background: #459d36;
+				border: solid 2px #459d36;
+				border-radius: 0;
+				color: white;
+			}
+			/*关键词*/
+			.keyword{
+				width: 480px;
+				height: 30px;
+				margin-top: 12px;
+				font-size: 12px;
+				li{
+					float: left;
+					margin-left: 10px;
+					a{
+						margin-right: 10px;
+						color:#999;
+						&:hover{
+							color:black;
+						}
+					}
+				}
+				.hot a{
+					color:#ff0000;
+					&:hover{
+						color:#ff0000;
+					}
+				}
+			}
+		}
+		/*电话*/
+		.telephone{
+			float: left;
+			margin-left: 60px;
+			margin-top: 32px;
+			width: 155px;
+			height: 28px;
+			background: url("../../img/include/phone.png");
+		}
+		/*购物车*/
+		.cart{
+			float: left;
+			margin-left:55px;
+			height: 38px;
+			margin-top: 30px;
+			background: #fcfcfc;
+			border: solid 1px #f5f5f5;
+			border-radius: 14px;
+			overflow: hidden;
+			padding-left: 50px;
+			background:url("../../img/include/cart.png") no-repeat -10px -10px;
+			line-height: 38px;
+			span{
+				color: red;
+			}
+		}
+	}
+}
